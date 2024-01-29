@@ -1,0 +1,27 @@
+{% extends "login.html" %}
+
+{% block title %}
+    CreateAccount
+{% endblock %}
+
+{% block forms %}
+
+    <form method="POST">
+        {{ form.csrf_token }}
+
+            {{ form.email() }}
+            {{ form.email.label() }}
+
+            {{ form.username() }}
+            {{ form.username.label() }}
+
+            {{ form.password() }}
+            {{ form.password.label() }}
+
+            {{ form.pass_submit() }}
+            {{ form.pass_submit.label() }}
+
+            {{ form.button_submit() }}
+    </form>
+
+{% endblock %}

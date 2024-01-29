@@ -1,0 +1,12 @@
+{% extends "login.html" %}
+
+{% block title %} Pefil: {{ user }} {% endblock %}
+
+{% block body %}
+
+    <h1> Wellcome : {{ user.username }}</h1>
+
+    <a href="{{ url_for('logout') }}">Exit</a>
+
+{% endblock %}
+

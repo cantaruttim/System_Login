@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+    {% block title %}
+        LoginPage
+    {% endblock %}
+    </title>
+</head>
+
+{% block body %}
+<body>
+    <h1>Login Page</h1>
+
+    {% block forms %}
+    <form method="POST">
+        {{ form.csrf_token }}
+
+            {{ form.email.label() }}
+            {{ form.email() }}
+
+            {{ form.password.label() }}
+            {{ form.password() }}
+
+            {{ form.button_submit() }}
+
+    </form>
+    {% endblock %}
+</body>
+{% endblock %}
+</html>
